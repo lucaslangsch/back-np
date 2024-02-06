@@ -17,6 +17,10 @@ app.get("/", function (req, res) {
 	res.status(200).sendFile("index.html");
 });
 
+app.get("/test", function (req, res) {
+	res.send('Hello World!')
+});
+
 app.post("/create_preference", (req, res) => {
   const list = []
 
