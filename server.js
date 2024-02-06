@@ -13,11 +13,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("../../client/html-js"));
 app.use(cors());
-app.get("/", function (req, res) {
-	res.status(200).sendFile("index.html");
-});
+// app.get("/", function (req, res) {
+// 	res.status(200).sendFile("index.html");
+// });
 
-app.get("/test", function (req, res) {
+app.get("/", function (req, res) {
 	res.send('Hello World!')
 });
 
