@@ -21,6 +21,11 @@ app.get("/", function (req, res) {
 	res.send('Hello World!')
 });
 
+app.get('/download', function(req, res){
+  const file = `${__dirname}/upload-folder/tabela_medidas.pdf`;
+  res.download(file);
+});
+
 app.post("/create_preference", (req, res) => {
   const list = []
 
